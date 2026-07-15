@@ -24,6 +24,8 @@ import unicodedata
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
+__version__ = "0.1.0"
+
 # ----------------------------------------------------------------------------
 # Config (override via environment)
 # ----------------------------------------------------------------------------
@@ -562,7 +564,7 @@ def render_menu(token_q):
 # HTTP handler
 # ----------------------------------------------------------------------------
 class Handler(BaseHTTPRequestHandler):
-    server_version = "papershell"
+    server_version = "papershell/" + __version__
     protocol_version = "HTTP/1.1"
 
     # ---- auth -----------------------------------------------------------

@@ -10,6 +10,7 @@ browser. It can drive ordinary shell programs, but it is especially well suited
 to text-first TUIs such as **Claude Code** and **Codex**.
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=plastic)
+![Version](https://img.shields.io/badge/version-v0.1.0-6f42c1?style=plastic)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?style=plastic&logo=python&logoColor=white)
 ![Python dependencies](https://img.shields.io/badge/pip%20dependencies-0-brightgreen?style=plastic)
 ![JavaScript](https://img.shields.io/badge/JavaScript-0%20lines-critical?style=plastic)
