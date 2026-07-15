@@ -19,31 +19,11 @@ Python file, the `tmux` you already have, and nothing else.
 
 ---
 
-<!-- Drop a real photo of your Kindle at docs/kindle.jpg and this shows it.
-     Until then, the text preview below is what the page looks like. -->
+<div align="center">
 
-```
-+---------------------------------------------+
-| [kindle]  o   Auto-refresh: off 2s 3s 5s  # |
-| +-----------------------------------------+ |
-| |  #######   Claude Code v2.1             | |
-| | #########  Opus 4.8 - /home/you         | |
-| |   ## ##                                 | |
-| |                                         | |
-| | > building the release...               | |
-| | * Ran tests - 71 passed                 | |
-| |                                         | |
-| | +-------------------------------------+ | |
-| | | > _                                 | | |
-| | +-------------------------------------+ | |
-| +-----------------------------------------+ |
-| +-----+---------------------------+-------+ |
-| |     | type here, then Enter     |  ^ up | |
-| | Esc |                           +-------+ |
-| |     |                           | v down| |
-| +-----+---------------------------+-------+ |
-+---------------------------------------------+
-```
+![papershell running Codex on a Kindle](docs/kindle.png)
+
+</div>
 
 ## Why
 
