@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-kindle-connector — a no-JS web terminal for Kindle's primitive browser.
+papershell — a no-JS web terminal for Kindle's primitive browser.
 
 Design goals:
   * The Kindle "Experimental Browser" runs an ancient WebKit with flaky/absent
@@ -301,7 +301,7 @@ PAGE = """<!DOCTYPE html>
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {viewport}
-<title>kindle-connector</title>
+<title>papershell</title>
 {refresh}
 <style>
   * {{ box-sizing: border-box; }}
@@ -562,7 +562,7 @@ def render_menu(token_q):
 # HTTP handler
 # ----------------------------------------------------------------------------
 class Handler(BaseHTTPRequestHandler):
-    server_version = "kindle-connector"
+    server_version = "papershell"
     protocol_version = "HTTP/1.1"
 
     # ---- auth -----------------------------------------------------------
@@ -709,7 +709,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
-    print("kindle-connector  http://%s:%d/   session=%s  %dx%d  cmd=%s"
+    print("papershell  http://%s:%d/   session=%s  %dx%d  cmd=%s"
           % (HOST, PORT, SESSION, COLS, ROWS, DEFCMD))
     if TOKEN:
         print("  token auth ON — open with  ?t=%s" % TOKEN)

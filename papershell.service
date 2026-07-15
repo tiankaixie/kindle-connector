@@ -1,11 +1,11 @@
 [Unit]
-Description=kindle-connector — no-JS web terminal for Kindle -> claude/codex
+Description=papershell — no-JS web terminal for Kindle -> claude/codex
 After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=%h/codebase/kindle-connector
-ExecStart=/usr/bin/python3 %h/codebase/kindle-connector/server.py
+WorkingDirectory=%h/codebase/papershell
+ExecStart=/usr/bin/python3 %h/codebase/papershell/server.py
 Environment=KINDLE_PORT=8090
 Environment=KINDLE_COLS=58
 Environment=KINDLE_ROWS=32

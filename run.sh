@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Convenience launcher for kindle-connector.
+# Convenience launcher for papershell.
 # Override anything via env, e.g.:  KINDLE_PORT=9000 KINDLE_CMD=codex ./run.sh
 set -euo pipefail
 cd "$(dirname "$0")"

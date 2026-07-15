@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📖 kindle-connector
+# 📖 papershell
 
 ### Run Claude Code from a $100 Kindle. No app. No JavaScript. Just a browser.
 
@@ -51,7 +51,7 @@ The Kindle "Experimental Browser" runs an ancient WebKit: flaky JavaScript, no
 usable WebSockets, no web fonts, a font that can't draw box-art or emoji. Every
 web-terminal (ttyd, Wetty, …) falls over on it.
 
-**kindle-connector flips the problem.** The client stays *dumb* — plain HTML
+**papershell flips the problem.** The client stays *dumb* — plain HTML
 forms and a `<pre>`, zero JavaScript — and **tmux** does everything hard: the
 PTY, the ANSI/TUI rendering, the scrollback. The server just reads the screen as
 text and posts your keystrokes.
@@ -89,8 +89,8 @@ long Claude session there is.
 ## Quick start
 
 ```bash
-git clone https://github.com/tiankaixie/kindle-connector.git
-cd kindle-connector
+git clone https://github.com/tiankaixie/papershell.git
+cd papershell
 ./run.sh                     # serves on http://<this-box-ip>:8090/
 ```
 
@@ -152,9 +152,9 @@ internet. For a light gate, set `KINDLE_TOKEN=...` and open the page once with
 
 ```bash
 mkdir -p ~/.config/systemd/user
-cp kindle-connector.service ~/.config/systemd/user/
+cp papershell.service ~/.config/systemd/user/
 systemctl --user daemon-reload
-systemctl --user enable --now kindle-connector
+systemctl --user enable --now papershell
 loginctl enable-linger "$USER"   # survive logout/reboot
 ```
 
