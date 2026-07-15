@@ -2,13 +2,12 @@
 
 # 📖 papershell
 
-### A lightweight browser terminal for your Kindle — built for conversational TUIs.
+### A quiet, no-JS bridge between your Kindle and tmux.
 
-Use an e-ink reader — or another browser on your network — as a calm,
-line-oriented interface to `tmux`. papershell can drive ordinary shell programs,
-but it is best suited to text-first TUIs such as **Claude Code** and **Codex**.
-The server is a single Python file with no third-party Python packages or frontend
-build step.
+papershell is not a terminal emulator. It captures a tmux pane as text and sends
+your input back through plain HTML forms — simple enough to use from a Kindle
+browser. It can drive ordinary shell programs, but it is especially well suited
+to text-first TUIs such as **Claude Code** and **Codex**.
 
 ![License](https://img.shields.io/badge/license-MIT-blue?style=plastic)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?style=plastic&logo=python&logoColor=white)
@@ -29,14 +28,22 @@ build step.
 
 ## Why
 
-The Kindle "Experimental Browser" is much more limited than a modern browser.
-JavaScript- and WebSocket-heavy terminals can be unreliable on it, and its fonts
-do not cover many of the symbols used by modern TUIs.
+I built papershell because checking on a running project often meant reopening my
+laptop or phone. Those devices put the work next to everything else — another tab,
+a feed, a short video — and it was easy to lose focus before I even noticed.
 
-**papershell keeps the browser side small.** The client uses plain HTML forms and
-a `<pre>`, with no client-side JavaScript. **tmux** provides the PTY and terminal
-screen buffer; the server captures the currently rendered pane as text and sends
-submitted text or named keys back to tmux.
+I wanted a quieter way to stay in touch with the work: check a long-running task,
+send a short reply when needed, then look up and return to the physical world
+around me. A Kindle makes that interaction intentionally narrow.
+
+papershell does not try to replace a full terminal. It is a focused window into a
+tmux session, designed for workflows where most of the interaction is reading and
+responding one line at a time.
+
+That constraint also fits the Kindle's limited browser. Instead of shipping a
+JavaScript terminal or opening a WebSocket, papershell uses plain HTML forms and a
+`<pre>`. **tmux** provides the PTY and terminal screen buffer; the server captures
+the currently rendered pane as text and sends submitted text or named keys back.
 
 ```
 Kindle browser ──plain HTML form──▶  server.py  ──tmux──▶  shell / claude / codex
@@ -44,8 +51,8 @@ Kindle browser ──plain HTML form──▶  server.py  ──tmux──▶  s
                                                  send-keys    → text + named keys
 ```
 
-The result is an e-ink-friendly way to check and respond to long, text-based
-terminal sessions when most interaction happens one line at a time.
+The server is a single Python file with no third-party Python packages or frontend
+build step.
 
 ## Features
 
